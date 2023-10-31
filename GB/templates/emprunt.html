@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<ul>
+    <li>Type: {{ type }}/10</li>
+    <li>Energie: {{ energie }}/10</li>
+    <li>Kilometrage: {{ dist }}/10</li>
+    <li>Age: {{ year }}/10</li>
+    <li>Total: {{ total }}/40</li>
+    <li>
+        {% if bonus > 0 %}
+            Malus: +{{ bonus }}%
+        {% elif bonus < 0 %}
+            Bonus: {{ bonus }}%
+        {% endif %}
+    </li>
+    <li>Taux d'emprunt: {{ rate }}%</li>
+</ul>
+</html>

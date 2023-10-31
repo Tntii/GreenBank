@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<section>
+    <div class="input-group mb-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Type:</span>
+      </div>
+        <select name="car-type">
+            {% for t in types %}
+                <option value="{{ t.type }}">{{ t.type }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</section>
+
+
+<section>
+    <div class="input-group mb-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Energie:</span>
+      </div>
+    <select name="car-energie">
+            {% for e in energies %}
+                <option value="{{ e.energie }}">{{ e.energie }}</option>
+            {% endfor %}
+    </select>
+        </div>
+</section>
+
+<section>
+    <div class="input-group mb-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Kilometrage: </span>
+      </div>
+      <input type="number" min="0" value="0" name="dist">
+        <div class="input-group-append">
+        <span class="input-group-text">km/an</span>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <div class="input-group mb-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Année:</span>
+      </div>
+      <input type="number" name="car-year" value="2023" max="2023">
+    </div>
+
+</section>
+
+<section>
+    <div class="input-group mb-5">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Passager:    </span>
+      </div>
+    <input type="number" name="car-passager" value="1" min="1" max="4">
+    </div>
+</section>
+
+<button hx-post="{% url 'add-car' %}"
+        hx-target="#stat"
+        type="submit">Simuler</button>
+</html>

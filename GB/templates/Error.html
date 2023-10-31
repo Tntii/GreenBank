@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<label>Error(s)</label>
+<html lang="fr">
+{% if type == "error" %}
+    <label>Erreur de valeur sur le type: Veuillez rentré un nombre</label>
+{% endif %}
+{% if year == "error" %}
+    <label>Veuillez rentré un nombre inferieur à 2023 </label>
+{% endif %}
+{% if energie == "error" %}
+    <label>Veuillez rentré un nombre entre 1 et 4</label>
+{% endif %}
+{% if dist == "error" %}
+    <label>Veuillez rentré un nombre supérireur à 0</label>
+{% endif %}
+{% if passager == "error" %}
+    <label>Veuillez rentré un nombre entre 1 et 4</label>
+{% endif %}
+</html>
