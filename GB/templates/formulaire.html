@@ -22,7 +22,7 @@
       </div>
     <select name="car-energie">
             {% for e in energies %}
-                <option value="{{ e.energie }}">{{ e.energie }}</option>
+                <option value="{{ e.type }}">{{ e.type }}</option>
             {% endfor %}
     </select>
         </div>
@@ -46,7 +46,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text">Année:</span>
       </div>
-      <input type="number" name="car-year" value="2023" max="2023">
+      <input type="number" name="car-year" value="2023">
     </div>
 
 </section>

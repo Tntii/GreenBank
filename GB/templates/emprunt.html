@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-<ul>
-    <li>Type: {{ type }}/10</li>
-    <li>Energie: {{ energie }}/10</li>
-    <li>Kilometrage: {{ dist }}/10</li>
-    <li>Age: {{ year }}/10</li>
-    <li>Total: {{ total }}/40</li>
-    <li>
+<ul class="list-unstyled">
+    <dl>
+        <dt>Type:</dt>
+        <dd>{{ type }}/10</dd>
+    </dl>
+    <dl>
+        <dt>Energie:</dt>
+        <dd>{{ energie }}/10</dd>
+    </dl>
+    <dl>
+        <dt>Kilometrage:</dt>
+        <dd>{{ dist }}/10</dd>
+    </dl>
+    <dl>
+        <dt>Age:</dt>
+        <dd>{{ year }}/10</dd>
+    </dl>
+    <dl>
+        <dt>Total:</dt>
+        <dd>{{ total }}/40</dd>
+    </dl>
         {% if bonus > 0 %}
-            Malus: +{{ bonus }}%
+            <dl ><dt>Malus:</dt>
+                <dd style="color: red">+{{ bonus }}%</dd>
+            </dl>
         {% elif bonus < 0 %}
-            Bonus: {{ bonus }}%
+            <dl style="color: green"><dt>
+                Bonus:</dt>
+                <dd>{{ bonus }}%</dd>
+            </dl>
         {% endif %}
-    </li>
-    <li>Taux d'emprunt: {{ rate }}%</li>
+
+    <dl>
+        <dt>Taux d'emprunt:</dt>
+        <dd>{{ rate }}%</dd>
+    </dl>
 </ul>
 </html>

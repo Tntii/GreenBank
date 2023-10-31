@@ -14,7 +14,7 @@ class TypeRate(models.Model):
 
 
 class EnergieRate(models.Model):
-    energie = models.CharField(max_length=20)
+    type = models.CharField(max_length=20)
     rate = models.FloatField()
 
 

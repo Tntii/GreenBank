@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<label>Error(s)</label>
 <html lang="fr">
-{% if type == "error" %}
-    <label>Erreur de valeur sur le type: Veuillez rentré un nombre</label>
-{% endif %}
-{% if year == "error" %}
-    <label>Veuillez rentré un nombre inferieur à 2023 </label>
-{% endif %}
-{% if energie == "error" %}
-    <label>Veuillez rentré un nombre entre 1 et 4</label>
-{% endif %}
-{% if dist == "error" %}
-    <label>Veuillez rentré un nombre supérireur à 0</label>
-{% endif %}
-{% if passager == "error" %}
-    <label>Veuillez rentré un nombre entre 1 et 4</label>
-{% endif %}
+<ul class="bg-danger list-unstyled" style="color: white">
+    <li><label>Error(s)</label></li>
+    {% if type == "error" %}
+        <li><label>Le type de véhicule choisi n'existe pas</label></li>
+    {% endif %}
+    {% if year == "error" %}
+        <li><label>Veuillez rentré un nombre inferieur ou egal à 2023</label></li>
+    {% endif %}
+    {% if energie == "error" %}
+        <li><label>Le type d'energie chosis n'existe pas</label></li>
+    {% endif %}
+    {% if dist == "error" %}
+        <li><label>Veuillez rentré un nombre supérireur ou egal à 0</label></li>
+    {% endif %}
+    {% if passager == "error" %}
+        <li><label>Veuillez rentré un nombre entre 1 et 4</label></li>
+    {% endif %}
+</ul>
 </html>
